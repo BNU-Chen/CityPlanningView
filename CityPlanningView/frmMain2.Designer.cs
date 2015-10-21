@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.btn_Guihua = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Fenxi = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Xianzhuang = new DevExpress.XtraEditors.SimpleButton();
-            this.flowLayout_Main = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.galleryControl1 = new DevExpress.XtraBars.Ribbon.GalleryControl();
+            this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.galleryControl1)).BeginInit();
+            this.galleryControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Guihua
@@ -70,20 +76,51 @@
             this.btn_Xianzhuang.Text = "现状图";
             this.btn_Xianzhuang.Click += new System.EventHandler(this.btn_Xianzhuang_Click);
             // 
-            // flowLayout_Main
+            // panel1
             // 
-            this.flowLayout_Main.AutoScroll = true;
-            this.flowLayout_Main.Location = new System.Drawing.Point(36, 68);
-            this.flowLayout_Main.Name = "flowLayout_Main";
-            this.flowLayout_Main.Size = new System.Drawing.Size(826, 536);
-            this.flowLayout_Main.TabIndex = 1;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.galleryControl1);
+            this.panel1.Location = new System.Drawing.Point(2, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(879, 549);
+            this.panel1.TabIndex = 1;
+            // 
+            // galleryControl1
+            // 
+            this.galleryControl1.Controls.Add(this.galleryControlClient1);
+            this.galleryControl1.DesignGalleryGroupIndex = 0;
+            this.galleryControl1.DesignGalleryItemIndex = 0;
+            this.galleryControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            // 
+            // galleryControlGallery1
+            // 
+            this.galleryControl1.Gallery.AllowHoverImages = true;
+            galleryItemGroup1.Caption = "Group1";
+            this.galleryControl1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup1});
+            this.galleryControl1.Gallery.HoverImageSize = new System.Drawing.Size(250, 200);
+            this.galleryControl1.Gallery.ImageSize = new System.Drawing.Size(150, 120);
+            this.galleryControl1.Gallery.ShowItemText = true;
+            this.galleryControl1.Location = new System.Drawing.Point(0, 0);
+            this.galleryControl1.Name = "galleryControl1";
+            this.galleryControl1.Size = new System.Drawing.Size(879, 549);
+            this.galleryControl1.TabIndex = 0;
+            this.galleryControl1.Text = "galleryControl1";
+            // 
+            // galleryControlClient1
+            // 
+            this.galleryControlClient1.GalleryControl = this.galleryControl1;
+            this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
+            this.galleryControlClient1.Size = new System.Drawing.Size(858, 545);
             // 
             // frmMain2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 616);
-            this.Controls.Add(this.flowLayout_Main);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Xianzhuang);
             this.Controls.Add(this.btn_Fenxi);
             this.Controls.Add(this.btn_Guihua);
@@ -92,6 +129,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "沈阳经济区";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain2_FormClosed);
+            this.Load += new System.EventHandler(this.frmMain2_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.galleryControl1)).EndInit();
+            this.galleryControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -101,7 +142,9 @@
         private DevExpress.XtraEditors.SimpleButton btn_Guihua;
         private DevExpress.XtraEditors.SimpleButton btn_Fenxi;
         private DevExpress.XtraEditors.SimpleButton btn_Xianzhuang;
-        private System.Windows.Forms.FlowLayoutPanel flowLayout_Main;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraBars.Ribbon.GalleryControl galleryControl1;
+        private DevExpress.XtraBars.Ribbon.GalleryControlClient galleryControlClient1;
 
     }
 }

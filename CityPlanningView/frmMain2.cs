@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 
 using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Ribbon;
 
 namespace CityPlanningView
 {
@@ -18,9 +19,9 @@ namespace CityPlanningView
     {
         private frmStartPanel frmStart = null;
 
-        private string thumbGuihuaPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\规划图\thumb";
-        private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图\thumb";
-        private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图\thumb";
+        private string thumbGuihuaPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\规划图";
+        private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图";
+        private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图";
 
         public frmMain2(frmStartPanel _frmStart)
         {
@@ -68,9 +69,10 @@ namespace CityPlanningView
             {
                 return;
             }
-            this.flowLayout_Main.Controls.Clear();
+            string pathThumb = path + "\\thumb";
+            this.galleryControl1.Gallery.Groups[0].Items.Clear();
 
-            DirectoryInfo di = new DirectoryInfo(path);
+            DirectoryInfo di = new DirectoryInfo(pathThumb);
             FileSystemInfo[] files = di.GetFileSystemInfos();
             for (int i = 0; i < files.Length; i++)
             {
@@ -84,13 +86,28 @@ namespace CityPlanningView
                         return;
                     }
                     string title = Path.GetFileNameWithoutExtension(file.FullName);
+                    string hoverImgPath = path + "\\hover\\" + file.Name;
 
-                    ucMapThumb thumbImage = new ucMapThumb();
-                    thumbImage.PictureBox.Image = new Bitmap(file.FullName);
-                    thumbImage.Title = title;
-                    flowLayout_Main.Controls.Add(thumbImage);
+                    Image img = Image.FromFile(file.FullName);
+                    GalleryItem gi = new GalleryItem();
+                    gi.Image = Image.FromFile(file.FullName);
+                    if (File.Exists(hoverImgPath))
+                    {
+                        gi.HoverImage = new Bitmap(hoverImgPath);
+                    }
+                    //gi.Caption = title;
+                    gi.Description = title;
+                    gi.Tag = path + "\\" + title + ".mxd";
+
+                    this.galleryControl1.Gallery.Groups[0].Items.Add(gi);
                 }
             }
+        }
+
+        private void frmMain2_Load(object sender, EventArgs e)
+        {
+            LoadMapThumb(thumbGuihuaPath);
+            ResetButtons(this.btn_Guihua);
         }
     }
 }
