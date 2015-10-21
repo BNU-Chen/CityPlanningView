@@ -43,6 +43,7 @@
             this.picBox_Map.Size = new System.Drawing.Size(144, 94);
             this.picBox_Map.TabIndex = 0;
             this.picBox_Map.TabStop = false;
+            this.picBox_Map.Click += new System.EventHandler(this.picBox_Map_Click);
             this.picBox_Map.MouseEnter += new System.EventHandler(this.picBox_Map_MouseEnter);
             this.picBox_Map.MouseLeave += new System.EventHandler(this.picBox_Map_MouseLeave);
             this.picBox_Map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picBox_Map_MouseMove);

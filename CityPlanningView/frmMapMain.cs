@@ -12,9 +12,31 @@ namespace CityPlanningView
 {
     public partial class frmMapMain : Form
     {
-        public frmMapMain()
+        private Control ctrl = null;
+
+        public frmMapMain(Control _ctrl)
         {
             InitializeComponent();
+            ctrl = _ctrl;
+            ctrl.Visible = false;
+        }
+
+        private void frmMapMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ctrl.Visible = true;
+        }
+
+        private string mapPath = "";
+        public string MapPath
+        {
+            get
+            {
+                return mapPath;
+            }
+            set
+            {
+                this.ucMapControl1.MapPath = value;
+            }
         }
     }
 }

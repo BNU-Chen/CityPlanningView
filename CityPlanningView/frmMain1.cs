@@ -21,7 +21,6 @@ namespace CityPlanningView
         private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图\thumb";
         private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图\thumb";
 
-        private List<string> mapPathList = new List<string>();
 
         public frmMain1(frmStartPanel _frmStart)
         {
@@ -39,8 +38,7 @@ namespace CityPlanningView
             LoadMapThumb(thumbGuihuaPath, this.flowLayoutPanel_Guihua);
             LoadMapThumb(thumbFenxiPath, this.flowLayoutPanel_Fenxi);
             LoadMapThumb(thumbXianzhuangPath, this.flowLayoutPanel_Xianzhuang);
-
-                    
+        
         }
 
         private void LoadMapThumb(string path, FlowLayoutPanel flow)
@@ -69,10 +67,17 @@ namespace CityPlanningView
                     ucMapThumb thumbImage = new ucMapThumb();
                     thumbImage.PictureBox.Image = new Bitmap(file.FullName);
                     thumbImage.Title = title;
+                    thumbImage.PictureBox.Click += PictureBox_Click;
                     flow.Controls.Add(thumbImage);
                 }
             }
             ResizeForm();
+        }
+
+        void PictureBox_Click(object sender, EventArgs e)
+        {
+            frmMapMain frmMap = new frmMapMain(this);
+            frmMap.Show();
         }
 
         private void flowLayoutPanel_Guihua_Resize(object sender, EventArgs e)

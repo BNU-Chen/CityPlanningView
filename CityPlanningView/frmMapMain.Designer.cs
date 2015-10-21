@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ucMapControl1 = new CityPlanningView.ucMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,9 +40,21 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.ucMapControl1);
             this.splitContainer1.Size = new System.Drawing.Size(918, 618);
             this.splitContainer1.SplitterDistance = 646;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // ucMapControl1
+            // 
+            this.ucMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMapControl1.Location = new System.Drawing.Point(0, 0);
+            this.ucMapControl1.Name = "ucMapControl1";
+            this.ucMapControl1.Size = new System.Drawing.Size(646, 618);
+            this.ucMapControl1.TabIndex = 0;
             // 
             // frmMapMain
             // 
@@ -51,6 +65,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmMapMain";
             this.Text = "地图标题";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMapMain_FormClosed);
+            this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -60,6 +76,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private ucMapControl ucMapControl1;
 
     }
 }

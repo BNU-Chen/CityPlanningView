@@ -35,5 +35,12 @@ namespace CityPlanningView
             frm2.Show();
             this.Visible = false;
         }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            frmMain3 frm3 = new frmMain3(this);
+            frm3.Show();
+            this.Visible = false;
+        }
     }
 }
