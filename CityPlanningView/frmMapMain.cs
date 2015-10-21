@@ -14,6 +14,7 @@ namespace CityPlanningView
     {
         private Control ctrl = null;
 
+        
         public frmMapMain(Control _ctrl)
         {
             InitializeComponent();
@@ -24,6 +25,20 @@ namespace CityPlanningView
         private void frmMapMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             ctrl.Visible = true;
+        }
+
+
+        #region //封装变量
+        public string MapTitle
+        {
+            get
+            {
+                return this.Text;
+            }
+            set
+            {
+                this.Text = value;
+            }
         }
 
         private string mapPath = "";
@@ -38,5 +53,8 @@ namespace CityPlanningView
                 this.ucMapControl1.MapPath = value;
             }
         }
+        #endregion
+
+
     }
 }

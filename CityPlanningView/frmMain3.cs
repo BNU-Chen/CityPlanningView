@@ -86,6 +86,7 @@ namespace CityPlanningView
             string mapPath = e.Item.Tag.ToString();
             frmMapMain frmMap = new frmMapMain(this);
             frmMap.MapPath = mapPath;
+            frmMap.MapTitle = Path.GetFileNameWithoutExtension(mapPath);
             frmMap.Show();
         }
 

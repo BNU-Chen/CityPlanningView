@@ -52,6 +52,7 @@
             // 
             this.ucMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucMapControl1.Location = new System.Drawing.Point(0, 0);
+            this.ucMapControl1.MapPath = "";
             this.ucMapControl1.Name = "ucMapControl1";
             this.ucMapControl1.Size = new System.Drawing.Size(646, 618);
             this.ucMapControl1.TabIndex = 0;
@@ -64,7 +65,9 @@
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmMapMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "地图标题";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMapMain_FormClosed);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

@@ -103,6 +103,7 @@
             this.galleryControl1.Gallery.HoverImageSize = new System.Drawing.Size(250, 200);
             this.galleryControl1.Gallery.ImageSize = new System.Drawing.Size(150, 120);
             this.galleryControl1.Gallery.ShowItemText = true;
+            this.galleryControl1.Gallery.ItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.galleryControl1_Gallery_ItemClick);
             this.galleryControl1.Location = new System.Drawing.Point(0, 0);
             this.galleryControl1.Name = "galleryControl1";
             this.galleryControl1.Size = new System.Drawing.Size(879, 549);
