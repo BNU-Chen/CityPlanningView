@@ -24,7 +24,7 @@ namespace CityPlanningView
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frmMain1 frm1 = new frmMain1(this);
+            frmMapSelection frm1 = new frmMapSelection(this);
             frm1.Show();
             this.Visible = false;
         }

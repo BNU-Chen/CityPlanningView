@@ -1,4 +1,4 @@
-﻿namespace CityPlanning
+﻿namespace CityPlanningView
 {
     partial class frmMapSelection
     {
@@ -137,6 +137,7 @@
             this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmMapSelection";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMapSelection_FormClosed);
             this.Load += new System.EventHandler(this.frmMapSelection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_layoutViewColumn1)).EndInit();
