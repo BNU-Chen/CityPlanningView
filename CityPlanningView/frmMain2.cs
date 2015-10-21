@@ -109,5 +109,14 @@ namespace CityPlanningView
             LoadMapThumb(thumbGuihuaPath);
             ResetButtons(this.btn_Guihua);
         }
+
+        private void galleryControl1_Gallery_ItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            string mapPath = e.Item.Tag.ToString();
+            frmMapMain frmMap = new frmMapMain(this);
+            frmMap.MapPath = mapPath;
+            frmMap.MapTitle = Path.GetFileNameWithoutExtension(mapPath);
+            frmMap.Show();
+        }
     }
 }
