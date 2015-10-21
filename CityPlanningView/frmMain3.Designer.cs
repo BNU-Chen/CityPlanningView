@@ -50,6 +50,7 @@
             // 
             // galleryControlGallery1
             // 
+            this.gallery_Main.Gallery.AllowHoverImages = true;
             galleryItemGroup1.Caption = "规划图";
             galleryItem1.Caption = "Item2";
             galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
@@ -69,8 +70,8 @@
             galleryItemGroup2,
             galleryItemGroup3,
             galleryItemGroup4});
-            this.gallery_Main.Gallery.HoverImageSize = new System.Drawing.Size(150, 120);
-            this.gallery_Main.Gallery.ImageSize = new System.Drawing.Size(120, 90);
+            this.gallery_Main.Gallery.HoverImageSize = new System.Drawing.Size(250, 200);
+            this.gallery_Main.Gallery.ImageSize = new System.Drawing.Size(150, 120);
             this.gallery_Main.Gallery.ShowItemText = true;
             this.gallery_Main.Gallery.ItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.galleryControlGallery1_ItemClick);
             this.gallery_Main.Location = new System.Drawing.Point(0, 0);

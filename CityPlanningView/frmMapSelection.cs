@@ -22,7 +22,7 @@ namespace CityPlanningView
 {
     public partial class frmMapSelection : Form
     {
-        private string mainFloderPath = @"F:\项目资料\项目-沈阳经济开发区\项目 - 沈阳经济区\图集\经济区图册正面";
+        private string mainFloderPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图";
         private Size cardSize;
         private frmStartPanel frmStart = null;
 
@@ -34,7 +34,7 @@ namespace CityPlanningView
 
         private void frmMapSelection_Load(object sender, EventArgs e)
         {
-            cardSize = new Size(this.Size.Width / 2, this.Size.Height / 2);
+            cardSize = new Size(this.Size.Width * 2 / 3, this.Size.Height * 2 / 3);
             SetGridControlView(mainFloderPath, cardSize);
         }
 
@@ -105,8 +105,8 @@ namespace CityPlanningView
                 newRow["文件名"] = Path.GetFileNameWithoutExtension(filePath);
                 newRow["文件路径"] = filePath;
                 Image resImage = Image.FromFile(filePath);
-                Image resImage1 = resImage.GetThumbnailImage(imageSize.Width, imageSize.Height, null, IntPtr.Zero);
-                newRow["图片文件"] = resImage1;
+                //Image resImage1 = resImage.GetThumbnailImage(imageSize.Width, imageSize.Height, null, IntPtr.Zero);
+                newRow["图片文件"] = resImage;
                 dt.Rows.Add(newRow);
             }
             return dt;
@@ -114,17 +114,17 @@ namespace CityPlanningView
 
         private void btnStatusMap_Click(object sender, EventArgs e)
         {
-            SetGridControlView(mainFloderPath + "\\现状图", cardSize);
+            SetGridControlView(mainFloderPath + "\\现状图\\thumb", cardSize);
         }
 
         private void btnPlanMap_Click(object sender, EventArgs e)
         {
-            SetGridControlView(mainFloderPath + "\\规划图", cardSize);
+            SetGridControlView(mainFloderPath + "\\规划图\\thumb", cardSize);
         }
 
         private void btnAnalysisMap_Click(object sender, EventArgs e)
         {
-            SetGridControlView(mainFloderPath + "\\分析图", cardSize);
+            SetGridControlView(mainFloderPath + "\\分析图\\thumb", cardSize);
         }
 
         private void frmMapSelection_FormClosed(object sender, FormClosedEventArgs e)
