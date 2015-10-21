@@ -18,22 +18,23 @@ using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
 
-namespace CityPlanning
+namespace CityPlanningView
 {
     public partial class frmMapSelection : Form
     {
-        private string mainFloderPath;
+        private string mainFloderPath = @"F:\项目资料\项目-沈阳经济开发区\项目 - 沈阳经济区\图集\经济区图册正面";
         private Size cardSize;
+        private frmStartPanel frmStart = null;
 
-        public frmMapSelection()
+        public frmMapSelection(frmStartPanel _frmStart)
         {
             InitializeComponent();
+            frmStart = _frmStart;
         }
 
         private void frmMapSelection_Load(object sender, EventArgs e)
         {
             cardSize = new Size(this.Size.Width / 2, this.Size.Height / 2);
-            mainFloderPath = @"F:\项目资料\项目-沈阳经济开发区\项目 - 沈阳经济区\图集\经济区图册正面";
             SetGridControlView(mainFloderPath, cardSize);
         }
 
@@ -124,6 +125,14 @@ namespace CityPlanning
         private void btnAnalysisMap_Click(object sender, EventArgs e)
         {
             SetGridControlView(mainFloderPath + "\\分析图", cardSize);
+        }
+
+        private void frmMapSelection_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (frmStart != null)
+            {
+                frmStart.Close();
+            }
         }
     }
 }
