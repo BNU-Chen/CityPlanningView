@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChartAndTableShow));
             this.xtraTabControl_ChartAndTable = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage_Chart = new DevExpress.XtraTab.XtraTabPage();
             this.chartControl = new DevExpress.XtraCharts.ChartControl();
             this.xtraTabPage_Table = new DevExpress.XtraTab.XtraTabPage();
-            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
+            this.spreadsheetControl = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.icbeChartType = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.icChartTypeImage = new DevExpress.Utils.ImageCollection(this.components);
@@ -47,7 +47,7 @@
             this.xtraTabControl_ChartAndTable.SuspendLayout();
             this.xtraTabPage_Chart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
             this.xtraTabPage_Table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbeChartType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icChartTypeImage)).BeginInit();
@@ -81,34 +81,34 @@
             this.chartControl.Location = new System.Drawing.Point(0, 0);
             this.chartControl.Name = "chartControl";
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            sideBySideBarSeriesLabel1.LineVisible = true;
-            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
+            sideBySideBarSeriesLabel2.LineVisible = true;
+            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel2;
             this.chartControl.Size = new System.Drawing.Size(394, 243);
             this.chartControl.TabIndex = 0;
             this.chartControl.ObjectSelected += new DevExpress.XtraCharts.HotTrackEventHandler(this.chartControl_ObjectSelected);
             // 
             // xtraTabPage_Table
             // 
-            this.xtraTabPage_Table.Controls.Add(this.spreadsheetControl1);
+            this.xtraTabPage_Table.Controls.Add(this.spreadsheetControl);
             this.xtraTabPage_Table.Name = "xtraTabPage_Table";
             this.xtraTabPage_Table.Size = new System.Drawing.Size(394, 243);
             this.xtraTabPage_Table.Text = "数据表";
             // 
-            // spreadsheetControl1
+            // spreadsheetControl
             // 
-            this.spreadsheetControl1.AllowDrop = true;
-            this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 0);
-            this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Options.Export.Csv.Culture = new System.Globalization.CultureInfo("");
-            this.spreadsheetControl1.Options.Export.Txt.Culture = new System.Globalization.CultureInfo("");
-            this.spreadsheetControl1.Options.Export.Txt.ValueSeparator = ',';
-            this.spreadsheetControl1.Options.Import.Csv.Culture = new System.Globalization.CultureInfo("");
-            this.spreadsheetControl1.Options.Import.ThrowExceptionOnInvalidDocument = false;
-            this.spreadsheetControl1.Options.Import.Txt.Culture = new System.Globalization.CultureInfo("");
-            this.spreadsheetControl1.Size = new System.Drawing.Size(394, 243);
-            this.spreadsheetControl1.TabIndex = 0;
-            this.spreadsheetControl1.Text = "spreadsheetControl1";
+            this.spreadsheetControl.AllowDrop = true;
+            this.spreadsheetControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spreadsheetControl.Location = new System.Drawing.Point(0, 0);
+            this.spreadsheetControl.Name = "spreadsheetControl";
+            this.spreadsheetControl.Options.Export.Csv.Culture = new System.Globalization.CultureInfo("");
+            this.spreadsheetControl.Options.Export.Txt.Culture = new System.Globalization.CultureInfo("");
+            this.spreadsheetControl.Options.Export.Txt.ValueSeparator = ',';
+            this.spreadsheetControl.Options.Import.Csv.Culture = new System.Globalization.CultureInfo("");
+            this.spreadsheetControl.Options.Import.ThrowExceptionOnInvalidDocument = false;
+            this.spreadsheetControl.Options.Import.Txt.Culture = new System.Globalization.CultureInfo("");
+            this.spreadsheetControl.Size = new System.Drawing.Size(394, 243);
+            this.spreadsheetControl.TabIndex = 0;
+            this.spreadsheetControl.Text = "spreadsheetControl1";
             // 
             // labelControl1
             // 
@@ -206,7 +206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_ChartAndTable)).EndInit();
             this.xtraTabControl_ChartAndTable.ResumeLayout(false);
             this.xtraTabPage_Chart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).EndInit();
             this.xtraTabPage_Table.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icbeChartType.Properties)).EndInit();
@@ -224,7 +224,7 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_Chart;
         private DevExpress.XtraCharts.ChartControl chartControl;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_Table;
-        private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
+        private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ImageComboBoxEdit icbeChartType;
         private DevExpress.XtraEditors.LabelControl labelControl2;
