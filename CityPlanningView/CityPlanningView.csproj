@@ -34,11 +34,6 @@
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Docs.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\DevExpress\DXperience 13.1\Bin\Framework\DevExpress.Docs.v13.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Images.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -226,6 +221,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fullExtent_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20151023090353.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ图片20151023090509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
