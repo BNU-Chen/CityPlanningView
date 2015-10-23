@@ -23,6 +23,15 @@ namespace CityPlanningView
         private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图";
         private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图";
 
+        private string dataPath = "";
+
+        public string DataPath
+        {
+            get { return dataPath; }
+            set { dataPath = value; }
+        }
+
+
         public frmMain2(frmStartPanel _frmStart)
         {
             InitializeComponent();
@@ -106,7 +115,7 @@ namespace CityPlanningView
 
         private void frmMain2_Load(object sender, EventArgs e)
         {
-            LoadMapThumb(thumbGuihuaPath);
+            LoadMapThumb(dataPath);
             ResetButtons(this.btn_Guihua);
         }
 
@@ -115,7 +124,6 @@ namespace CityPlanningView
             string mapPath = e.Item.Tag.ToString();
             frmMapMain frmMap = new frmMapMain(this);
             frmMap.MapPath = mapPath;
-            frmMap.MapTitle = Path.GetFileNameWithoutExtension(mapPath);
             frmMap.Show();
         }
     }

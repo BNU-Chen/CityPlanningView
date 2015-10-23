@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucMapControl));
-            this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
             this.lbl_Title = new DevExpress.XtraEditors.LabelControl();
             this.toolStrip_MapTool = new System.Windows.Forms.ToolStrip();
@@ -37,23 +36,12 @@
             this.tsbtn_ZoomOut = new System.Windows.Forms.ToolStripButton();
             this.tsbtn_FullExtent = new System.Windows.Forms.ToolStripButton();
             this.pic_Legend = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
+            this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.toolStrip_MapTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Legend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // axMapControl1
-            // 
-            this.axMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axMapControl1.Location = new System.Drawing.Point(0, 0);
-            this.axMapControl1.Name = "axMapControl1";
-            this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(698, 494);
-            this.axMapControl1.TabIndex = 0;
-            this.axMapControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl1_OnMouseDown);
-            this.axMapControl1.OnMouseUp += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseUpEventHandler(this.axMapControl1_OnMouseUp);
-            this.axMapControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseMoveEventHandler(this.axMapControl1_OnMouseMove);
             // 
             // axLicenseControl1
             // 
@@ -74,16 +62,17 @@
             // 
             // toolStrip_MapTool
             // 
+            this.toolStrip_MapTool.BackColor = System.Drawing.SystemColors.Control;
             this.toolStrip_MapTool.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip_MapTool.ImageScalingSize = new System.Drawing.Size(25, 25);
+            this.toolStrip_MapTool.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip_MapTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtn_ZoomIn,
             this.tsbtn_ZoomOut,
             this.tsbtn_FullExtent});
             this.toolStrip_MapTool.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.toolStrip_MapTool.Location = new System.Drawing.Point(30, 144);
+            this.toolStrip_MapTool.Location = new System.Drawing.Point(35, 140);
             this.toolStrip_MapTool.Name = "toolStrip_MapTool";
-            this.toolStrip_MapTool.Size = new System.Drawing.Size(30, 107);
+            this.toolStrip_MapTool.Size = new System.Drawing.Size(37, 147);
             this.toolStrip_MapTool.TabIndex = 4;
             this.toolStrip_MapTool.Text = "toolStrip1";
             // 
@@ -93,7 +82,7 @@
             this.tsbtn_ZoomIn.Image = global::CityPlanningView.Properties.Resources.zoomIn_32;
             this.tsbtn_ZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtn_ZoomIn.Name = "tsbtn_ZoomIn";
-            this.tsbtn_ZoomIn.Size = new System.Drawing.Size(28, 29);
+            this.tsbtn_ZoomIn.Size = new System.Drawing.Size(35, 36);
             this.tsbtn_ZoomIn.Text = "放大";
             // 
             // tsbtn_ZoomOut
@@ -102,7 +91,7 @@
             this.tsbtn_ZoomOut.Image = global::CityPlanningView.Properties.Resources.zoomOut_32;
             this.tsbtn_ZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtn_ZoomOut.Name = "tsbtn_ZoomOut";
-            this.tsbtn_ZoomOut.Size = new System.Drawing.Size(28, 29);
+            this.tsbtn_ZoomOut.Size = new System.Drawing.Size(35, 36);
             this.tsbtn_ZoomOut.Text = "缩小";
             // 
             // tsbtn_FullExtent
@@ -111,7 +100,7 @@
             this.tsbtn_FullExtent.Image = global::CityPlanningView.Properties.Resources.fullExtent_32;
             this.tsbtn_FullExtent.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtn_FullExtent.Name = "tsbtn_FullExtent";
-            this.tsbtn_FullExtent.Size = new System.Drawing.Size(28, 29);
+            this.tsbtn_FullExtent.Size = new System.Drawing.Size(35, 36);
             this.tsbtn_FullExtent.Text = "全图";
             // 
             // pic_Legend
@@ -122,6 +111,18 @@
             this.pic_Legend.Size = new System.Drawing.Size(137, 125);
             this.pic_Legend.TabIndex = 2;
             this.pic_Legend.TabStop = false;
+            // 
+            // axMapControl1
+            // 
+            this.axMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axMapControl1.Location = new System.Drawing.Point(0, 0);
+            this.axMapControl1.Name = "axMapControl1";
+            this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
+            this.axMapControl1.Size = new System.Drawing.Size(698, 494);
+            this.axMapControl1.TabIndex = 0;
+            this.axMapControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl1_OnMouseDown);
+            this.axMapControl1.OnMouseUp += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseUpEventHandler(this.axMapControl1_OnMouseUp);
+            this.axMapControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseMoveEventHandler(this.axMapControl1_OnMouseMove);
             // 
             // ucMapControl
             // 
@@ -135,11 +136,11 @@
             this.Name = "ucMapControl";
             this.Size = new System.Drawing.Size(698, 494);
             this.Resize += new System.EventHandler(this.ucMapControl_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).EndInit();
             this.toolStrip_MapTool.ResumeLayout(false);
             this.toolStrip_MapTool.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Legend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axMapControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

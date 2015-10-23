@@ -40,7 +40,7 @@ namespace CityPlanningView
                 if (File.Exists(mapPath))
                 {
                     this.axMapControl1.LoadMxFile(mapPath);
-                    this.axMapControl1.Refresh();
+                    this.axMapControl1.Refresh();                    
                 }
             }
         }

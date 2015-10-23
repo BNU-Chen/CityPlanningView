@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+
 namespace CityPlanningView
 {
     public partial class frmMapMain : Form
@@ -29,18 +31,6 @@ namespace CityPlanningView
 
 
         #region //封装变量
-        public string MapTitle
-        {
-            get
-            {
-                return this.Text;
-            }
-            set
-            {
-                this.Text = value;
-            }
-        }
-
         private string mapPath = "";
         public string MapPath
         {
@@ -51,6 +41,8 @@ namespace CityPlanningView
             set
             {
                 this.ucMapControl1.MapPath = value;
+                string title = Path.GetFileNameWithoutExtension(value);
+                this.Text = title;
             }
         }
         #endregion
