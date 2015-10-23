@@ -19,7 +19,8 @@ namespace CityPlanningView
 
         //uc
         private ucMapDescription ucDesc = new ucMapDescription();
-        private ucChartAndTableShow ucChart = new ucChartAndTableShow();
+        private ucChartAndTableShow ucChart;
+        private ucChartTableShow ucChart2;
         private ucMapContrast ucContrast = new ucMapContrast();
 
         public frmMapMain(Control _ctrl)
@@ -105,23 +106,23 @@ namespace CityPlanningView
             dt.Rows.Add(dr1);
 
             DataRow dr2 = dt.NewRow();
-            dr2["区域"] = "沈阳";
-            dr2["数据"] = 100;
+            dr2["区域"] = "阜新";
+            dr2["数据"] = 80;
             dt.Rows.Add(dr2);
 
             DataRow dr3 = dt.NewRow();
-            dr3["区域"] = "沈阳";
-            dr3["数据"] = 100;
+            dr3["区域"] = "铁岭";
+            dr3["数据"] = 50;
             dt.Rows.Add(dr3);
 
             DataRow dr4 = dt.NewRow();
-            dr4["区域"] = "沈阳";
-            dr4["数据"] = 100;
+            dr4["区域"] = "辽阳";
+            dr4["数据"] = 80;
             dt.Rows.Add(dr4);
-
+            ucChart2 = new ucChartTableShow(dt, DevExpress.XtraCharts.ViewType.Bar);
             this.panel_Home.Controls.Clear();
-            ucChart.Dock = DockStyle.Fill;
-            this.panel_Home.Controls.Add(ucChart);
+            ucChart2.Dock = DockStyle.Fill;
+            this.panel_Home.Controls.Add(ucChart2);
         }
 
         private void btn_MapContrast_Click(object sender, EventArgs e)

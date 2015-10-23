@@ -19,14 +19,14 @@ using DevExpress.XtraTab;
 
 namespace CityPlanningView
 {
-    public partial class ucChartAndTableShow : UserControl
+    public partial class ucChartTableShow : UserControl
     {
         private DataTable dataSource;   //数据源
 
         public DataTable DataSource    //数据源
         {
-            set 
-            { 
+            set
+            {
                 this.dataSource = value;
                 SetChartShow(getViewTypByIndex(this.icbeChartType.SelectedIndex));
                 this.spreadsheetControl.ActiveWorksheet.Clear(this.spreadsheetControl.ActiveWorksheet.GetUsedRange());
@@ -35,7 +35,7 @@ namespace CityPlanningView
             get { return this.dataSource; }
         }
 
-        public ucChartAndTableShow(DataTable dt, ViewType vt)
+        public ucChartTableShow(DataTable dt, ViewType vt)
         {
             InitializeComponent();
             this.icbeChartType.SelectedIndex = getIndexByViewType(vt);
@@ -43,7 +43,7 @@ namespace CityPlanningView
 
             Worksheet worksheet = this.spreadsheetControl.ActiveWorksheet;
             worksheet.ActiveView.ShowHeadings = false;
-            
+
             this.dataSource = dt.Copy();
             SetChartShow(vt);
             worksheet.Import(this.dataSource, true, 0, 0);
@@ -56,7 +56,7 @@ namespace CityPlanningView
             this.Clear();
             this.icbeChartType.SelectedIndex = getIndexByViewType(vt);
             this.getDataFieldFromDataTable(this.dataSource);
-            this.checkedDataFields.CheckAll();  
+            this.checkedDataFields.CheckAll();
             try
             {
                 XYDiagram diagram = (XYDiagram)(this.chartControl).Diagram;
@@ -259,22 +259,18 @@ namespace CityPlanningView
         {
             SaveFileDialog saveFileDlg = new SaveFileDialog();
             saveFileDlg.RestoreDirectory = true;
-            if (this.xtraTabControl_ChartAndTable.SelectedTabPageIndex == 0)
+            saveFileDlg.Filter = "JPG文件（*.jpg）|*.jpg|Excel文件（*.xlsx）|*.xlsx";
+            if (saveFileDlg.ShowDialog() == DialogResult.OK)
             {
-                saveFileDlg.Filter = "JPG文件（*.jpg）|*.jpg";
-                if (saveFileDlg.ShowDialog() == DialogResult.OK)
+                string localFilePath = saveFileDlg.FileName.ToString();
+                string extensionName = Path.GetExtension(localFilePath);
+                if (extensionName == ".jpg")
                 {
-                    string localFilePath = saveFileDlg.FileName.ToString();
                     this.chartControl.ExportToImage(localFilePath, ImageFormat.Jpeg);
                 }
-            }
-            else
-            {
-                saveFileDlg.Filter = "Excel文件（*.xlsx）|*.xlsx";
-                if (saveFileDlg.ShowDialog() == DialogResult.OK)
+                else if (extensionName == ".xlsx")
                 {
-                    string localFilePath = saveFileDlg.FileName.ToString();
-                    IWorkbook _workbook =this.spreadsheetControl.Document;
+                    IWorkbook _workbook = this.spreadsheetControl.Document;
                     _workbook.SaveDocument(localFilePath, DocumentFormat.OpenXml);
                 }
             }

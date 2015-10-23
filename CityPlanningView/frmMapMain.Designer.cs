@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMapMain));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel_Right = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Home = new System.Windows.Forms.Panel();
             this.panel_Top = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.panel_Map = new System.Windows.Forms.Panel();
             this.btn_Description = new System.Windows.Forms.ToolStripButton();
             this.btn_Chart = new System.Windows.Forms.ToolStripButton();
             this.btn_MapContrast = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_Home = new System.Windows.Forms.ToolStripButton();
             this.btn_Return = new System.Windows.Forms.ToolStripButton();
             this.btn_Close = new System.Windows.Forms.ToolStripButton();
-            this.panel_Home = new System.Windows.Forms.Panel();
-            this.panel_Map = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ucMapControl1 = new CityPlanningView.ucMapControl();
             this.panel_Right.SuspendLayout();
             this.panel_Top.SuspendLayout();
@@ -64,20 +64,19 @@
             this.panel_Right.Controls.Add(this.panel_Top);
             this.panel_Right.Controls.Add(this.panel1);
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Right.Location = new System.Drawing.Point(924, 0);
+            this.panel_Right.Location = new System.Drawing.Point(784, 0);
             this.panel_Right.Name = "panel_Right";
-            this.panel_Right.Size = new System.Drawing.Size(260, 666);
+            this.panel_Right.Size = new System.Drawing.Size(400, 666);
             this.panel_Right.TabIndex = 3;
             // 
-            // panel1
+            // panel_Home
             // 
-            this.panel1.BackgroundImage = global::CityPlanningView.Properties.Resources.legend;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 538);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 128);
-            this.panel1.TabIndex = 5;
+            this.panel_Home.BackColor = System.Drawing.Color.White;
+            this.panel_Home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Home.Location = new System.Drawing.Point(0, 94);
+            this.panel_Home.Name = "panel_Home";
+            this.panel_Home.Size = new System.Drawing.Size(400, 346);
+            this.panel_Home.TabIndex = 7;
             // 
             // panel_Top
             // 
@@ -86,7 +85,7 @@
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(0, 0);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(260, 94);
+            this.panel_Top.Size = new System.Drawing.Size(400, 94);
             this.panel_Top.TabIndex = 6;
             // 
             // toolStrip2
@@ -98,9 +97,32 @@
             this.btn_MapContrast});
             this.toolStrip2.Location = new System.Drawing.Point(0, 47);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(260, 39);
+            this.toolStrip2.Size = new System.Drawing.Size(400, 39);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_Home,
+            this.btn_Return,
+            this.btn_Close});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(400, 47);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // panel_Map
+            // 
+            this.panel_Map.Controls.Add(this.ucMapControl1);
+            this.panel_Map.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Map.Location = new System.Drawing.Point(0, 0);
+            this.panel_Map.Name = "panel_Map";
+            this.panel_Map.Size = new System.Drawing.Size(784, 666);
+            this.panel_Map.TabIndex = 4;
             // 
             // btn_Description
             // 
@@ -129,20 +151,6 @@
             this.btn_MapContrast.Text = "对比";
             this.btn_MapContrast.Click += new System.EventHandler(this.btn_MapContrast_Click);
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_Home,
-            this.btn_Return,
-            this.btn_Close});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(260, 47);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
             // btn_Home
             // 
             this.btn_Home.Image = global::CityPlanningView.Properties.Resources.home_black;
@@ -170,23 +178,15 @@
             this.btn_Close.Text = "关闭";
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // panel_Home
+            // panel1
             // 
-            this.panel_Home.BackColor = System.Drawing.Color.White;
-            this.panel_Home.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Home.Location = new System.Drawing.Point(0, 94);
-            this.panel_Home.Name = "panel_Home";
-            this.panel_Home.Size = new System.Drawing.Size(260, 444);
-            this.panel_Home.TabIndex = 7;
-            // 
-            // panel_Map
-            // 
-            this.panel_Map.Controls.Add(this.ucMapControl1);
-            this.panel_Map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Map.Location = new System.Drawing.Point(0, 0);
-            this.panel_Map.Name = "panel_Map";
-            this.panel_Map.Size = new System.Drawing.Size(924, 666);
-            this.panel_Map.TabIndex = 4;
+            this.panel1.BackgroundImage = global::CityPlanningView.Properties.Resources.legend;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 440);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 226);
+            this.panel1.TabIndex = 5;
             // 
             // ucMapControl1
             // 
@@ -194,7 +194,7 @@
             this.ucMapControl1.Location = new System.Drawing.Point(0, 0);
             this.ucMapControl1.MapPath = "";
             this.ucMapControl1.Name = "ucMapControl1";
-            this.ucMapControl1.Size = new System.Drawing.Size(924, 666);
+            this.ucMapControl1.Size = new System.Drawing.Size(784, 666);
             this.ucMapControl1.TabIndex = 1;
             // 
             // frmMapMain
