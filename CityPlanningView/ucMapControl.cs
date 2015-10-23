@@ -92,5 +92,10 @@ namespace CityPlanningView
         }
 
         #endregion
+
+        private void axMapControl1_OnDoubleClick(object sender, IMapControlEvents2_OnDoubleClickEvent e)
+        {
+
+        }
     }
 }

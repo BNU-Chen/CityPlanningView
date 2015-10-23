@@ -275,5 +275,10 @@ namespace CityPlanningView
                 }
             }
         }
+
+        private void ucChartTableShow_Resize(object sender, EventArgs e)
+        {
+
+        }
     }
 }

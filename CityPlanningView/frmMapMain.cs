@@ -68,36 +68,7 @@ namespace CityPlanningView
 
         private void frmMapMain_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btn_Home_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            ctrl.Visible = true;
-        }
-
-        private void btn_Return_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //介绍
-        private void btn_Description_Click(object sender, EventArgs e)
-        {
-            this.panel_Home.Controls.Clear();
-            ucDesc.Dock = DockStyle.Fill;
-            this.panel_Home.Controls.Add(ucDesc);
-        }
-
-        private void btn_Chart_Click(object sender, EventArgs e)
-        {
-            dt.Columns.Add("区域",typeof(string));
+            dt.Columns.Add("区域", typeof(string));
             dt.Columns.Add("数据", typeof(int));
 
             DataRow dr1 = dt.NewRow();
@@ -119,6 +90,40 @@ namespace CityPlanningView
             dr4["区域"] = "辽阳";
             dr4["数据"] = 80;
             dt.Rows.Add(dr4);
+
+            //显示地图介绍
+            this.panel_Home.Controls.Clear();
+            ucDesc.Dock = DockStyle.Fill;
+            this.panel_Home.Controls.Add(ucDesc);
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ctrl.Visible = true;
+        }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        //介绍
+        private void btn_Description_Click(object sender, EventArgs e)
+        {
+            this.panel_Home.Controls.Clear();
+            ucDesc.Dock = DockStyle.Fill;
+            this.panel_Home.Controls.Add(ucDesc);
+        }
+
+        private void btn_Chart_Click(object sender, EventArgs e)
+        {            
             ucChart2 = new ucChartTableShow(dt, DevExpress.XtraCharts.ViewType.Bar);
             this.panel_Home.Controls.Clear();
             ucChart2.Dock = DockStyle.Fill;

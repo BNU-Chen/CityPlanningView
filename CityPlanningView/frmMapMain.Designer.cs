@@ -35,15 +35,15 @@
             this.panel_Home = new System.Windows.Forms.Panel();
             this.panel_Top = new System.Windows.Forms.Panel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel_Map = new System.Windows.Forms.Panel();
             this.btn_Description = new System.Windows.Forms.ToolStripButton();
             this.btn_Chart = new System.Windows.Forms.ToolStripButton();
             this.btn_MapContrast = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_Home = new System.Windows.Forms.ToolStripButton();
             this.btn_Return = new System.Windows.Forms.ToolStripButton();
             this.btn_Close = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Map = new System.Windows.Forms.Panel();
             this.ucMapControl1 = new CityPlanningView.ucMapControl();
             this.panel_Right.SuspendLayout();
             this.panel_Top.SuspendLayout();
@@ -101,29 +101,6 @@
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_Home,
-            this.btn_Return,
-            this.btn_Close});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(400, 47);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // panel_Map
-            // 
-            this.panel_Map.Controls.Add(this.ucMapControl1);
-            this.panel_Map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Map.Location = new System.Drawing.Point(0, 0);
-            this.panel_Map.Name = "panel_Map";
-            this.panel_Map.Size = new System.Drawing.Size(784, 666);
-            this.panel_Map.TabIndex = 4;
-            // 
             // btn_Description
             // 
             this.btn_Description.Image = global::CityPlanningView.Properties.Resources.text;
@@ -150,6 +127,20 @@
             this.btn_MapContrast.Size = new System.Drawing.Size(67, 36);
             this.btn_MapContrast.Text = "对比";
             this.btn_MapContrast.Click += new System.EventHandler(this.btn_MapContrast_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_Home,
+            this.btn_Return,
+            this.btn_Close});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(400, 47);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // btn_Home
             // 
@@ -188,6 +179,15 @@
             this.panel1.Size = new System.Drawing.Size(400, 226);
             this.panel1.TabIndex = 5;
             // 
+            // panel_Map
+            // 
+            this.panel_Map.Controls.Add(this.ucMapControl1);
+            this.panel_Map.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Map.Location = new System.Drawing.Point(0, 0);
+            this.panel_Map.Name = "panel_Map";
+            this.panel_Map.Size = new System.Drawing.Size(784, 666);
+            this.panel_Map.TabIndex = 4;
+            // 
             // ucMapControl1
             // 
             this.ucMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -204,7 +204,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 666);
             this.Controls.Add(this.panel_Map);
             this.Controls.Add(this.panel_Right);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMapMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "地图标题";

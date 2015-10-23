@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChartTableShow));
             this.chartControl = new DevExpress.XtraCharts.ChartControl();
             this.spreadsheetControl = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
@@ -39,10 +39,10 @@
             this.checkedDataFields = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.icbeChartType = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.icChartTypeImage = new DevExpress.Utils.ImageCollection(this.components);
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkPercentShow.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedDataFields.Properties)).BeginInit();
@@ -56,8 +56,8 @@
             this.chartControl.Location = new System.Drawing.Point(0, 0);
             this.chartControl.Name = "chartControl";
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            sideBySideBarSeriesLabel1.LineVisible = true;
-            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
+            sideBySideBarSeriesLabel2.LineVisible = true;
+            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel2;
             this.chartControl.Size = new System.Drawing.Size(300, 280);
             this.chartControl.TabIndex = 13;
             // 
@@ -149,15 +149,6 @@
             this.icbeChartType.TabIndex = 14;
             this.icbeChartType.SelectedIndexChanged += new System.EventHandler(this.icbeChartType_SelectedIndexChanged);
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl1.Location = new System.Drawing.Point(11, 11);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 14);
-            this.labelControl1.TabIndex = 13;
-            this.labelControl1.Text = "图表类型：";
-            // 
             // icChartTypeImage
             // 
             this.icChartTypeImage.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("icChartTypeImage.ImageStream")));
@@ -170,6 +161,15 @@
             this.icChartTypeImage.InsertGalleryImage("point_16x16.png", "images/chart/point_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/chart/point_16x16.png"), 3);
             this.icChartTypeImage.Images.SetKeyName(3, "point_16x16.png");
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl1.Location = new System.Drawing.Point(11, 11);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(60, 14);
+            this.labelControl1.TabIndex = 13;
+            this.labelControl1.Text = "图表类型：";
+            // 
             // ucChartTableShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -177,10 +177,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.spreadsheetControl);
             this.Controls.Add(this.chartControl);
-            this.MinimumSize = new System.Drawing.Size(300, 600);
             this.Name = "ucChartTableShow";
             this.Size = new System.Drawing.Size(300, 600);
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            this.Resize += new System.EventHandler(this.ucChartTableShow_Resize);
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

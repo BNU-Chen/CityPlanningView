@@ -12,9 +12,9 @@ namespace CityPlanningView
 {
     public partial class frmMain1 : Form
     {
-        private string thumbGuihuaPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\规划图";
-        private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图";
-        private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图";
+        private string thumbGuihuaPath = @"D:\项目 - 沈阳经济区\data2\规划地图\规划图";
+        private string thumbFenxiPath = @"D:\项目 - 沈阳经济区\data2\规划地图\分析图";
+        private string thumbXianzhuangPath = @"D:\项目 - 沈阳经济区\data2\规划地图\现状图";
 
         private Form frmPre = null;
 
