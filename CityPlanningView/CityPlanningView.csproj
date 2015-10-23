@@ -144,11 +144,23 @@
     <Compile Include="ucChartAndTableShow.Designer.cs">
       <DependentUpon>ucChartAndTableShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMapContrast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapContrast.Designer.cs">
+      <DependentUpon>ucMapContrast.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucMapControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucMapControl.Designer.cs">
       <DependentUpon>ucMapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMapDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapDescription.Designer.cs">
+      <DependentUpon>ucMapDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="ucMapThumb.cs">
       <SubType>UserControl</SubType>
@@ -191,8 +203,14 @@
     <EmbeddedResource Include="ucChartAndTableShow.resx">
       <DependentUpon>ucChartAndTableShow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucMapContrast.resx">
+      <DependentUpon>ucMapContrast.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucMapControl.resx">
       <DependentUpon>ucMapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMapDescription.resx">
+      <DependentUpon>ucMapDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMapThumb.resx">
       <DependentUpon>ucMapThumb.cs</DependentUpon>
@@ -227,6 +245,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\QQ图片20151023090509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

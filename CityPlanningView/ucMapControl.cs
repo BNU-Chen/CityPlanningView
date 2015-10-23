@@ -29,8 +29,9 @@ namespace CityPlanningView
                 return this.axMapControl1;
             }
         }
+        
+        //地图路径
         private string mapPath = "";
-
         public string MapPath
         {
             get { return mapPath; }
@@ -39,8 +40,16 @@ namespace CityPlanningView
                 mapPath = value;
                 if (File.Exists(mapPath))
                 {
+                    //加载地图
                     this.axMapControl1.LoadMxFile(mapPath);
-                    this.axMapControl1.Refresh();                    
+                    this.axMapControl1.Refresh();
+                    //设置标题
+                    string title = Path.GetFileNameWithoutExtension(mapPath);
+                    this.lbl_Title.Text = title;
+                    //图例
+                    //string parentDir = Path.GetDirectoryName(mapPath);
+                    //string legendPath = parentDir+"\\legend.jpg";
+                    //this.pic_Legend.BackgroundImage = new Bitmap(legendPath);
                 }
             }
         }

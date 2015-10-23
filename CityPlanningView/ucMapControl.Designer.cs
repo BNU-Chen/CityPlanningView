@@ -54,9 +54,11 @@
             // 
             // lbl_Title
             // 
-            this.lbl_Title.Location = new System.Drawing.Point(285, 30);
+            this.lbl_Title.Appearance.BackColor = System.Drawing.Color.White;
+            this.lbl_Title.Appearance.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(226, 28);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(70, 14);
+            this.lbl_Title.Size = new System.Drawing.Size(136, 28);
             this.lbl_Title.TabIndex = 3;
             this.lbl_Title.Text = "labelControl1";
             // 
@@ -72,7 +74,7 @@
             this.toolStrip_MapTool.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip_MapTool.Location = new System.Drawing.Point(35, 140);
             this.toolStrip_MapTool.Name = "toolStrip_MapTool";
-            this.toolStrip_MapTool.Size = new System.Drawing.Size(37, 147);
+            this.toolStrip_MapTool.Size = new System.Drawing.Size(37, 128);
             this.toolStrip_MapTool.TabIndex = 4;
             this.toolStrip_MapTool.Text = "toolStrip1";
             // 
@@ -106,11 +108,13 @@
             // pic_Legend
             // 
             this.pic_Legend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic_Legend.Location = new System.Drawing.Point(561, 366);
+            this.pic_Legend.Image = global::CityPlanningView.Properties.Resources.legend;
+            this.pic_Legend.Location = new System.Drawing.Point(389, 276);
             this.pic_Legend.Name = "pic_Legend";
-            this.pic_Legend.Size = new System.Drawing.Size(137, 125);
+            this.pic_Legend.Size = new System.Drawing.Size(304, 210);
             this.pic_Legend.TabIndex = 2;
             this.pic_Legend.TabStop = false;
+            this.pic_Legend.Visible = false;
             // 
             // axMapControl1
             // 
