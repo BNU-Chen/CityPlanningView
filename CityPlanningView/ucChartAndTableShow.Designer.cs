@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucChartAndTableShow));
             this.xtraTabControl_ChartAndTable = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage_Chart = new DevExpress.XtraTab.XtraTabPage();
@@ -47,7 +47,7 @@
             this.xtraTabControl_ChartAndTable.SuspendLayout();
             this.xtraTabPage_Chart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
             this.xtraTabPage_Table.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbeChartType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icChartTypeImage)).BeginInit();
@@ -57,8 +57,7 @@
             // 
             // xtraTabControl_ChartAndTable
             // 
-            this.xtraTabControl_ChartAndTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.xtraTabControl_ChartAndTable.Dock = System.Windows.Forms.DockStyle.Top;
             this.xtraTabControl_ChartAndTable.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl_ChartAndTable.Name = "xtraTabControl_ChartAndTable";
             this.xtraTabControl_ChartAndTable.SelectedTabPage = this.xtraTabPage_Chart;
@@ -81,8 +80,8 @@
             this.chartControl.Location = new System.Drawing.Point(0, 0);
             this.chartControl.Name = "chartControl";
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            sideBySideBarSeriesLabel2.LineVisible = true;
-            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel2;
+            sideBySideBarSeriesLabel1.LineVisible = true;
+            this.chartControl.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
             this.chartControl.Size = new System.Drawing.Size(394, 243);
             this.chartControl.TabIndex = 0;
             this.chartControl.ObjectSelected += new DevExpress.XtraCharts.HotTrackEventHandler(this.chartControl_ObjectSelected);
@@ -200,13 +199,13 @@
             this.Controls.Add(this.icbeChartType);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.xtraTabControl_ChartAndTable);
-            this.MinimumSize = new System.Drawing.Size(400, 300);
+            this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "ucChartAndTableShow";
             this.Size = new System.Drawing.Size(400, 300);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_ChartAndTable)).EndInit();
             this.xtraTabControl_ChartAndTable.ResumeLayout(false);
             this.xtraTabPage_Chart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).EndInit();
             this.xtraTabPage_Table.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icbeChartType.Properties)).EndInit();

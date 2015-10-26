@@ -16,86 +16,85 @@ namespace CityPlanningView
 {
     public partial class frmMain3 : Form
     {
-        private frmStartPanel frmStart = null;
+        private Form frmStart = null;
 
-        private string thumbGuihuaPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\规划图";
-        private string thumbFenxiPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\分析图";
-        private string thumbXianzhuangPath = @"E:\项目 - 2014 沈阳经济区\data2\规划地图\现状图";
+        private string dataPath = "";
 
-        public frmMain3(frmStartPanel _frmStart)
+        public string DataPath
+        {
+            get { return dataPath; }
+            set { dataPath = value; }
+        }
+
+        public frmMain3(Form _frm)
         {
             InitializeComponent();
-            frmStart = _frmStart;
+            frmStart = _frm;
+            frmStart.Visible = false;
         }
 
         private void frmMain3_Load(object sender, EventArgs e)
         {
-            LoadPlanningMap();
-        }
-        private void LoadPlanningMap()
-        {
-            LoadMapThumb(thumbGuihuaPath, 0);
-            LoadMapThumb(thumbFenxiPath, 1);
-            LoadMapThumb(thumbXianzhuangPath, 2);
-
-        }
-        private void LoadMapThumb(string path,int groupIndex)
-        {
-            if (!Directory.Exists(path))
-            {
-                return;
-            }
-            string pathThumb = path + "\\thumb";
-            this.gallery_Main.Gallery.Groups[groupIndex].Items.Clear();
-
-            DirectoryInfo di = new DirectoryInfo(pathThumb);
-            FileSystemInfo[] files = di.GetFileSystemInfos();
-            for (int i = 0; i < files.Length; i++)
-            {
-                //如果是文件
-                if (files[i] is FileInfo)
-                {
-                    FileInfo file = files[i] as FileInfo;
-                    string ext = file.Extension;                    
-                    if (ext.ToLower() != ".jpg")
-                    {
-                        return;
-                    }
-                    string title = Path.GetFileNameWithoutExtension(file.FullName);
-                    string hoverImgPath = path + "\\hover\\" + file.Name;
-
-
-                    Image img = Image.FromFile(file.FullName);
-                    GalleryItem gi = new GalleryItem();
-                    gi.Image = Image.FromFile(file.FullName);
-                    if (File.Exists(hoverImgPath))
-                    {
-                        gi.HoverImage = new Bitmap(hoverImgPath);
-                    }
-                    gi.Caption = title;
-                    gi.Description = title;
-                    gi.Tag = path + "\\" + title + ".mxd";
-
-                    this.gallery_Main.Gallery.Groups[groupIndex].Items.Add(gi);
-                }
-            }
-        }
-
-        private void galleryControlGallery1_ItemClick(object sender, GalleryItemClickEventArgs e)
-        {
-            string mapPath = e.Item.Tag.ToString();
-            frmMapMain frmMap = new frmMapMain(this);
-            frmMap.MapPath = mapPath;
-            frmMap.MapTitle = Path.GetFileNameWithoutExtension(mapPath);
-            frmMap.Show();
         }
 
         private void frmMain3_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (frmStart != null)
             {
-                frmStart.Close();
+                frmStart.Visible = true;
             }
         }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+            LabelControl lbl = (LabelControl)sender;
+            string mapPath = dataPath + "\\" + lbl.Text + ".mxd";
+            if (!File.Exists(mapPath))
+            {
+                MessageBox.Show("地图文件不存在.");
+                return;
+            }
+            frmMapMain frmMap = new frmMapMain(this);
+            frmMap.MapPath = mapPath;
+            frmMap.Show();
+        }
+
+        private void labelControl1_MouseEnter(object sender, EventArgs e)
+        {
+            LabelControl lbl = (LabelControl)sender;
+            lbl.BackColor = Color.LightGray;
+
+            PreviewMap(lbl.Text);
+        }
+
+        private void labelControl1_MouseLeave(object sender, EventArgs e)
+        {
+            LabelControl lbl = (LabelControl)sender;
+            lbl.BackColor = Color.White;
+            RemovePreview();
+        }
+
+        private void PreviewMap(string title)
+        {
+            string picPath = dataPath + "\\thumb\\" + title + ".jpg";
+            if (!File.Exists(picPath))
+            {
+                return;
+            }
+            this.pictureBox1.BackgroundImage = new Bitmap(picPath);
+            this.lbl_preview.Text = title;
+        }
+
+        private void RemovePreview()
+        {
+            this.pictureBox1.BackgroundImage = null;
+            this.lbl_preview.Text = "";
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

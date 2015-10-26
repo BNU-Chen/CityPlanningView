@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -112,6 +114,12 @@
     <Compile Include="frmMain3.Designer.cs">
       <DependentUpon>frmMain3.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMapFeatureAttr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapFeatureAttr.Designer.cs">
+      <DependentUpon>frmMapFeatureAttr.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMapMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +152,35 @@
     <Compile Include="ucChartAndTableShow.Designer.cs">
       <DependentUpon>ucChartAndTableShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucChartTableShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucChartTableShow.Designer.cs">
+      <DependentUpon>ucChartTableShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucFeatureAttrItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucFeatureAttrItem.Designer.cs">
+      <DependentUpon>ucFeatureAttrItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMapContrast.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapContrast.Designer.cs">
+      <DependentUpon>ucMapContrast.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucMapControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucMapControl.Designer.cs">
       <DependentUpon>ucMapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMapDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapDescription.Designer.cs">
+      <DependentUpon>ucMapDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="ucMapThumb.cs">
       <SubType>UserControl</SubType>
@@ -164,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain3.resx">
       <DependentUpon>frmMain3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMapFeatureAttr.resx">
+      <DependentUpon>frmMapFeatureAttr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMapMain.resx">
       <DependentUpon>frmMapMain.cs</DependentUpon>
@@ -191,8 +226,20 @@
     <EmbeddedResource Include="ucChartAndTableShow.resx">
       <DependentUpon>ucChartAndTableShow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucChartTableShow.resx">
+      <DependentUpon>ucChartTableShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucFeatureAttrItem.resx">
+      <DependentUpon>ucFeatureAttrItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMapContrast.resx">
+      <DependentUpon>ucMapContrast.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucMapControl.resx">
       <DependentUpon>ucMapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMapDescription.resx">
+      <DependentUpon>ucMapDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMapThumb.resx">
       <DependentUpon>ucMapThumb.cs</DependentUpon>
@@ -229,6 +276,21 @@
     <None Include="Resources\QQ图片20151023090509.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\legend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\home_black.png" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
