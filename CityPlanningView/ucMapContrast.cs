@@ -56,6 +56,39 @@ namespace CityPlanningView
                 return this.axMapControl2;
             }
         }
+
+        #region //MapControl事件
+        private void axMapControl1_OnMouseDown(object sender, IMapControlEvents2_OnMouseDownEvent e)
+        {
+            AxMapControl MapControl = (AxMapControl)sender;
+            if (e.button == 4)
+            {
+                MapControl.ActiveView.ScreenDisplay.PanStart(axMapControl1.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(e.x, e.y));
+                MapControl.MousePointer = esriControlsMousePointer.esriPointerPan;
+            }
+        }
+
+        private void axMapControl1_OnMouseMove(object sender, IMapControlEvents2_OnMouseMoveEvent e)
+        {
+            AxMapControl MapControl = (AxMapControl)sender;
+            if (e.button == 4 && axMapControl1.ActiveView != null)
+            {
+                MapControl.ActiveView.ScreenDisplay.PanMoveTo(axMapControl1.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(e.x, e.y));
+            }
+        }
+
+        private void axMapControl1_OnMouseUp(object sender, IMapControlEvents2_OnMouseUpEvent e)
+        {
+            AxMapControl MapControl = (AxMapControl)sender;
+            if (e.button == 4 && axMapControl1.ActiveView != null)   //中键
+            {
+                MapControl.MousePointer = esriControlsMousePointer.esriPointerArrow;
+                MapControl.ActiveView.ScreenDisplay.PanStop();
+                MapControl.ActiveView.Refresh();
+            }
+        }
+
+        #endregion
     }
 }
 

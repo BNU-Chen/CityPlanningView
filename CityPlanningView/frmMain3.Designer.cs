@@ -52,11 +52,11 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Location = new System.Drawing.Point(132, 106);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(51, 19);
+            this.labelControl1.Size = new System.Drawing.Size(62, 21);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "1 地势图";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
@@ -66,11 +66,11 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(132, 132);
+            this.labelControl2.Location = new System.Drawing.Point(132, 135);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(103, 19);
+            this.labelControl2.Size = new System.Drawing.Size(126, 21);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "2 土地利用现状图";
             this.labelControl2.Click += new System.EventHandler(this.labelControl1_Click);
@@ -80,11 +80,11 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(132, 158);
+            this.labelControl3.Location = new System.Drawing.Point(132, 164);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(129, 19);
+            this.labelControl3.Size = new System.Drawing.Size(158, 21);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "3 基本农田保护红线图";
             this.labelControl3.Click += new System.EventHandler(this.labelControl1_Click);
@@ -94,11 +94,11 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(132, 184);
+            this.labelControl4.Location = new System.Drawing.Point(132, 193);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(103, 19);
+            this.labelControl4.Size = new System.Drawing.Size(126, 21);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "4 生态保护红线图";
             this.labelControl4.Click += new System.EventHandler(this.labelControl1_Click);
@@ -108,11 +108,11 @@
             // labelControl5
             // 
             this.labelControl5.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(132, 210);
+            this.labelControl5.Location = new System.Drawing.Point(132, 222);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(129, 19);
+            this.labelControl5.Size = new System.Drawing.Size(158, 21);
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "5 空间结构布局规划图";
             this.labelControl5.Click += new System.EventHandler(this.labelControl1_Click);
@@ -122,11 +122,11 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(132, 236);
+            this.labelControl6.Location = new System.Drawing.Point(132, 251);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(129, 19);
+            this.labelControl6.Size = new System.Drawing.Size(158, 21);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "6 城镇规模结构现状图";
             this.labelControl6.Click += new System.EventHandler(this.labelControl1_Click);
@@ -136,11 +136,11 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl7.Location = new System.Drawing.Point(132, 262);
+            this.labelControl7.Location = new System.Drawing.Point(132, 280);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(129, 19);
+            this.labelControl7.Size = new System.Drawing.Size(158, 21);
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "7 旅游资源布局现状图";
             this.labelControl7.Click += new System.EventHandler(this.labelControl1_Click);
@@ -150,11 +150,11 @@
             // labelControl8
             // 
             this.labelControl8.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(132, 288);
+            this.labelControl8.Location = new System.Drawing.Point(132, 309);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(129, 19);
+            this.labelControl8.Size = new System.Drawing.Size(158, 21);
             this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "8 国土开发战略格局图";
             this.labelControl8.Click += new System.EventHandler(this.labelControl1_Click);
@@ -164,11 +164,11 @@
             // labelControl9
             // 
             this.labelControl9.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Location = new System.Drawing.Point(132, 314);
+            this.labelControl9.Location = new System.Drawing.Point(132, 338);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(129, 19);
+            this.labelControl9.Size = new System.Drawing.Size(158, 21);
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "9 城镇规模结构规划图";
             this.labelControl9.Click += new System.EventHandler(this.labelControl1_Click);
@@ -178,11 +178,11 @@
             // labelControl10
             // 
             this.labelControl10.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl10.Location = new System.Drawing.Point(132, 340);
+            this.labelControl10.Location = new System.Drawing.Point(132, 367);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(137, 19);
+            this.labelControl10.Size = new System.Drawing.Size(167, 21);
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "10 产业空间布局规划图";
             this.labelControl10.Click += new System.EventHandler(this.labelControl1_Click);
@@ -192,11 +192,11 @@
             // labelControl11
             // 
             this.labelControl11.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl11.Location = new System.Drawing.Point(132, 366);
+            this.labelControl11.Location = new System.Drawing.Point(132, 396);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(137, 19);
+            this.labelControl11.Size = new System.Drawing.Size(167, 21);
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "11 城镇发展战略格局图";
             this.labelControl11.Click += new System.EventHandler(this.labelControl1_Click);
@@ -206,11 +206,11 @@
             // labelControl12
             // 
             this.labelControl12.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl12.Location = new System.Drawing.Point(132, 392);
+            this.labelControl12.Location = new System.Drawing.Point(132, 425);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(111, 19);
+            this.labelControl12.Size = new System.Drawing.Size(135, 21);
             this.labelControl12.TabIndex = 0;
             this.labelControl12.Text = "12 城市开发边界图";
             this.labelControl12.Click += new System.EventHandler(this.labelControl1_Click);
@@ -220,11 +220,11 @@
             // labelControl13
             // 
             this.labelControl13.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl13.Location = new System.Drawing.Point(132, 418);
+            this.labelControl13.Location = new System.Drawing.Point(132, 454);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(137, 19);
+            this.labelControl13.Size = new System.Drawing.Size(167, 21);
             this.labelControl13.TabIndex = 0;
             this.labelControl13.Text = "13 基础设施廊道分布图";
             this.labelControl13.Click += new System.EventHandler(this.labelControl1_Click);

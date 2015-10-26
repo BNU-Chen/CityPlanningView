@@ -95,7 +95,36 @@ namespace CityPlanningView
 
         private void axMapControl1_OnDoubleClick(object sender, IMapControlEvents2_OnDoubleClickEvent e)
         {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("name", typeof(string));
+            dt.Columns.Add("value", typeof(string));
 
+            DataRow dr = dt.NewRow();
+            dr["name"] = "行政区";
+            dr["value"] = "沈阳";
+            dt.Rows.Add(dr);
+
+            DataRow dr2 = dt.NewRow();
+            dr2["name"] = "面积";
+            dr2["value"] = "1234.345";
+            dt.Rows.Add(dr2);
+
+            DataRow dr3 = dt.NewRow();
+            dr3["name"] = "交通轨道长度";
+            dr3["value"] = "1235.223";
+            dt.Rows.Add(dr3);
+
+            DataRow dr4 = dt.NewRow();
+            dr4["name"] = "GDP总量";
+            dr4["value"] = "234345";
+            dt.Rows.Add(dr4);
+
+            Control control = (Control)sender;
+            System.Drawing.Point pt = control.PointToScreen(new System.Drawing.Point(e.x, e.y));
+            frmMapFeatureAttr pFrmMapFeatureAttr = new frmMapFeatureAttr();
+            pFrmMapFeatureAttr.AttrDataTable = dt;
+            pFrmMapFeatureAttr.Location = pt;
+            pFrmMapFeatureAttr.Show();
         }
     }
 }

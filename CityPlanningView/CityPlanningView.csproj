@@ -114,6 +114,12 @@
     <Compile Include="frmMain3.Designer.cs">
       <DependentUpon>frmMain3.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMapFeatureAttr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapFeatureAttr.Designer.cs">
+      <DependentUpon>frmMapFeatureAttr.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMapMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="ucChartTableShow.Designer.cs">
       <DependentUpon>ucChartTableShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucFeatureAttrItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucFeatureAttrItem.Designer.cs">
+      <DependentUpon>ucFeatureAttrItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucMapContrast.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +197,9 @@
     <EmbeddedResource Include="frmMain3.resx">
       <DependentUpon>frmMain3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMapFeatureAttr.resx">
+      <DependentUpon>frmMapFeatureAttr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMapMain.resx">
       <DependentUpon>frmMapMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucChartTableShow.resx">
       <DependentUpon>ucChartTableShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucFeatureAttrItem.resx">
+      <DependentUpon>ucFeatureAttrItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMapContrast.resx">
       <DependentUpon>ucMapContrast.cs</DependentUpon>

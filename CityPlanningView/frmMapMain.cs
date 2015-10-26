@@ -123,11 +123,16 @@ namespace CityPlanningView
         }
 
         private void btn_Chart_Click(object sender, EventArgs e)
-        {            
-            ucChart2 = new ucChartTableShow(dt, DevExpress.XtraCharts.ViewType.Bar);
+        {
+            ucChart = new ucChartAndTableShow(dt, DevExpress.XtraCharts.ViewType.Bar);
             this.panel_Home.Controls.Clear();
-            ucChart2.Dock = DockStyle.Fill;
-            this.panel_Home.Controls.Add(ucChart2);
+            ucChart.Dock = DockStyle.Fill;
+            this.panel_Home.Controls.Add(ucChart);
+
+            //ucChart2 = new ucChartTableShow(dt, DevExpress.XtraCharts.ViewType.Bar);
+            //this.panel_Home.Controls.Clear();
+            //ucChart2.Dock = DockStyle.Fill;
+            //this.panel_Home.Controls.Add(ucChart2);
         }
 
         private void btn_MapContrast_Click(object sender, EventArgs e)

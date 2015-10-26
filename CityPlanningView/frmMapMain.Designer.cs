@@ -178,6 +178,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 226);
             this.panel1.TabIndex = 5;
+            this.panel1.Visible = false;
             // 
             // panel_Map
             // 

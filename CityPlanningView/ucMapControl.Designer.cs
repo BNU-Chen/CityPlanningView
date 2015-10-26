@@ -109,9 +109,9 @@
             // 
             this.pic_Legend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Legend.Image = global::CityPlanningView.Properties.Resources.legend;
-            this.pic_Legend.Location = new System.Drawing.Point(389, 276);
+            this.pic_Legend.Location = new System.Drawing.Point(394, 293);
             this.pic_Legend.Name = "pic_Legend";
-            this.pic_Legend.Size = new System.Drawing.Size(304, 210);
+            this.pic_Legend.Size = new System.Drawing.Size(299, 193);
             this.pic_Legend.TabIndex = 2;
             this.pic_Legend.TabStop = false;
             this.pic_Legend.Visible = false;
@@ -133,9 +133,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pic_Legend);
             this.Controls.Add(this.toolStrip_MapTool);
             this.Controls.Add(this.lbl_Title);
-            this.Controls.Add(this.pic_Legend);
             this.Controls.Add(this.axLicenseControl1);
             this.Controls.Add(this.axMapControl1);
             this.Name = "ucMapControl";
